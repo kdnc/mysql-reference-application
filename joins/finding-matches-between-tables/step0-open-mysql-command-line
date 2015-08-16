@@ -1,0 +1,8 @@
+# If LOAD DATA LOCAL is disabled, either in the server or the client, a client that attempts to issue such a 
+# statement receives the following error message:
+
+# ERROR 1148: The used command is not allowed with this MySQL version
+
+# The workaround for this is to modify the command line mysql -e to pass in the --local-infile=1 
+# argument like this:
+mysql --local-infile=1 -u root -p
